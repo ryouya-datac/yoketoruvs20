@@ -39,7 +39,6 @@
             this.gmaeOverlabel = new System.Windows.Forms.Label();
             this.clearlabel = new System.Windows.Forms.Label();
             this.titlebutton = new System.Windows.Forms.Button();
-            this.titlebutton2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startbutton1
@@ -52,6 +51,7 @@
             this.startbutton1.TabIndex = 0;
             this.startbutton1.Text = "スタート";
             this.startbutton1.UseVisualStyleBackColor = false;
+            this.startbutton1.Click += new System.EventHandler(this.startbutton1_Click);
             // 
             // titleLabel
             // 
@@ -79,7 +79,7 @@
             // 
             this.hiLabel.AutoSize = true;
             this.hiLabel.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.hiLabel.Location = new System.Drawing.Point(283, 232);
+            this.hiLabel.Location = new System.Drawing.Point(287, 213);
             this.hiLabel.Name = "hiLabel";
             this.hiLabel.Size = new System.Drawing.Size(140, 24);
             this.hiLabel.TabIndex = 3;
@@ -104,6 +104,11 @@
             this.timeLabel.Size = new System.Drawing.Size(90, 24);
             this.timeLabel.TabIndex = 5;
             this.timeLabel.Text = "Time 100";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // gmaeOverlabel
             // 
@@ -130,22 +135,12 @@
             // titlebutton
             // 
             this.titlebutton.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titlebutton.Location = new System.Drawing.Point(291, 259);
+            this.titlebutton.Location = new System.Drawing.Point(295, 306);
             this.titlebutton.Name = "titlebutton";
             this.titlebutton.Size = new System.Drawing.Size(132, 51);
             this.titlebutton.TabIndex = 8;
             this.titlebutton.Text = "タイトルへ";
             this.titlebutton.UseVisualStyleBackColor = true;
-            // 
-            // titlebutton2
-            // 
-            this.titlebutton2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titlebutton2.Location = new System.Drawing.Point(291, 259);
-            this.titlebutton2.Name = "titlebutton2";
-            this.titlebutton2.Size = new System.Drawing.Size(132, 51);
-            this.titlebutton2.TabIndex = 9;
-            this.titlebutton2.Text = "タイトルへ";
-            this.titlebutton2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -153,7 +148,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.titlebutton2);
             this.Controls.Add(this.titlebutton);
             this.Controls.Add(this.clearlabel);
             this.Controls.Add(this.gmaeOverlabel);
@@ -182,7 +176,6 @@
         private System.Windows.Forms.Label gmaeOverlabel;
         private System.Windows.Forms.Label clearlabel;
         private System.Windows.Forms.Button titlebutton;
-        private System.Windows.Forms.Button titlebutton2;
     }
 }
 
