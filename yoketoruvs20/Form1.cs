@@ -24,7 +24,7 @@ namespace yoketoruvs20
         const int EnemyIndex = PlayerIndex + PlayerMax;
         const int ItemIndex = EnemyIndex + EnemyMax;
 
-        const string PlayerText = "(′・ω・`）";
+        const string PlayerText = "(′・ω・`)";
         const string EnemyText = "◇";
         const string ItemText = "★";
 
@@ -41,6 +41,9 @@ namespace yoketoruvs20
         }
         State currentState = State.None;
         State nextState = State.Title;
+
+        int[] vx = new int[ChrMax];
+        int[] vy = new int[ChrMax];
 
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(int vKey);
@@ -88,7 +91,20 @@ namespace yoketoruvs20
                     nextState = State.Clear;
                 }
             }
+            if(currentState==State.Game)
+            {
+                UpdateGame();
+            }
         }
+        void UpdateGame()
+        {
+            Point mp = PointToClient(MousePosition);
+
+            //TODO:mpがプレイヤーの中心になるように設定
+
+          // const string PlayerTextt=mp,;
+        }
+
         void initProc()
         {
             currentState = nextState;
@@ -111,6 +127,14 @@ namespace yoketoruvs20
                     startbutton1.Visible = false;
                     copyrightLabel.Visible = false;
                     hiLabel.Visible = false;
+
+                    for(int i=EnemyIndex;i<ChrMax;i++)
+                    {
+                        chrs[i].Left = rand.Next(ClientSize.Width - chrs[i].Width);
+                        chrs[i].Top = rand.Next(ClientSize.Height - chrs[i].Height);
+
+                    }
+
                     break;
 
                 case State.Gameover:
