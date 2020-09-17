@@ -98,10 +98,10 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.timeLabel.Font = new System.Drawing.Font("Trajan Pro 3", 15F, System.Drawing.FontStyle.Bold);
             this.timeLabel.Location = new System.Drawing.Point(83, 56);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(90, 24);
+            this.timeLabel.Size = new System.Drawing.Size(113, 31);
             this.timeLabel.TabIndex = 5;
             this.timeLabel.Text = "Time 100";
             // 
@@ -115,7 +115,7 @@
             this.gmaeOverlabel.AutoSize = true;
             this.gmaeOverlabel.Font = new System.Drawing.Font("MS UI Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)), true);
             this.gmaeOverlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gmaeOverlabel.Location = new System.Drawing.Point(262, 138);
+            this.gmaeOverlabel.Location = new System.Drawing.Point(271, 138);
             this.gmaeOverlabel.Name = "gmaeOverlabel";
             this.gmaeOverlabel.Size = new System.Drawing.Size(205, 40);
             this.gmaeOverlabel.TabIndex = 6;
@@ -141,6 +141,7 @@
             this.titlebutton.TabIndex = 8;
             this.titlebutton.Text = "タイトルへ";
             this.titlebutton.UseVisualStyleBackColor = true;
+            this.titlebutton.Click += new System.EventHandler(this.titlebutton_Click);
             // 
             // Form1
             // 
