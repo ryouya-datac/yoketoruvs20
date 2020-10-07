@@ -39,6 +39,8 @@
             this.gmaeOverlabel = new System.Windows.Forms.Label();
             this.clearlabel = new System.Windows.Forms.Label();
             this.titlebutton = new System.Windows.Forms.Button();
+            this.tempLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startbutton1
@@ -143,12 +145,33 @@
             this.titlebutton.UseVisualStyleBackColor = true;
             this.titlebutton.Click += new System.EventHandler(this.titlebutton_Click);
             // 
+            // tempLabel
+            // 
+            this.tempLabel.AutoSize = true;
+            this.tempLabel.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tempLabel.Location = new System.Drawing.Point(117, 128);
+            this.tempLabel.Name = "tempLabel";
+            this.tempLabel.Size = new System.Drawing.Size(29, 20);
+            this.tempLabel.TabIndex = 9;
+            this.tempLabel.Text = "★";
+            this.tempLabel.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(547, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 12);
+            this.label2.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tempLabel);
             this.Controls.Add(this.titlebutton);
             this.Controls.Add(this.clearlabel);
             this.Controls.Add(this.gmaeOverlabel);
@@ -160,6 +183,7 @@
             this.Controls.Add(this.startbutton1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +201,8 @@
         private System.Windows.Forms.Label gmaeOverlabel;
         private System.Windows.Forms.Label clearlabel;
         private System.Windows.Forms.Button titlebutton;
+        private System.Windows.Forms.Label tempLabel;
+        private System.Windows.Forms.Label label2;
     }
 }
 
